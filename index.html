@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="jquery-1.8.2.min.js"></script>
+    <script>
+ 	$(document).ready(function(){
+	 	$("#leftmenu").click(function(){
+	 		$("#leftmenu").removeClass("menu2 borderright");
+		    $("#leftmenu").addClass("menu1");
+		    $("#rightmenu").removeClass("menu1");
+		    $("#rightmenu").addClass("menu2 borderleft");
+		    $(".content1").show();
+		    $(".content2").hide();
+    	});
+
+	    $("#rightmenu").click(function(){
+		    $("#leftmenu").removeClass("menu1");
+		    $("#leftmenu").addClass("menu2 borderright");
+		    $("#rightmenu").removeClass("menu2 borderleft");
+		    $("#rightmenu").addClass("menu1");
+		    $(".content1").hide();
+	    	$(".content2").show();
+	});
+});
+</script>
+</head>
+<body>
+<div id="main">
+	<div id="menu">
+	<div id="leftmenu" class="menu1">菜单一</div>
+	<div id="rightmenu" class="menu2 borderleft">菜单二</div>
+    </div>
+	<div id="content">
+	<div class="content1">内容一</div>
+	<div class="content2">内容二</div>
+    </div>
+</div>
+</body>
+</html>
